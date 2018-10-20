@@ -1,0 +1,71 @@
+{
+  "array": [
+    {
+      "int": 0,
+      "bool": true,
+      "str": "array0str"
+    },
+    {
+      "int": 1,
+      "bool": true,
+      "str": "array1str"
+    },
+    {},
+    {
+      "test": "hello",
+      "obj": {
+        "str": "nested"
+      }
+    },
+    {},
+    {
+      "test": "hello",
+      "obj": {
+        "str": "nested"
+      }
+    }
+  ],
+  "deepArray": [
+    {
+      "id": "first array",
+      "array": [
+        {
+          "deepObject": {
+            "str": "deep string"
+          }
+        }
+      ]
+    },
+    {
+      "id": "second array",
+      "array": [
+        {
+          "deepObject": {
+            "str": "deep string two"
+          }
+        }
+      ]
+    },
+    {
+      "id": "third array",
+      "array": [
+        "arraystring",
+        "arraystring2"
+      ]
+    }
+  ],
+  "object": {
+    "int": 1,
+    "bool": true,
+    "str": "object-str",
+    "nested": {
+      "str": "nested-str",
+      "next": {
+        "str": "next-nested-str"
+      }
+    }
+  },
+  "int": 1,
+  "bool": true,
+  "str": "str"
+}
