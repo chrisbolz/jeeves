@@ -1,15 +1,14 @@
 # Jeeves
 
+**This project is being developed primarily for educational purposes**
+
 Jeeves is an easy to set up and use JSON file server with support for CSS Level 3-like selectors.
-JSON Mock API, orientiert an REST
 
 ## Setup
 
-node?
-
 ### Configuration
 
-Edit [config](config.json) file to set the port you want Jeeves to use.
+Edit [config.json](config.json) to set the port you want Jeeves to use.
 
 ### Starting the server
 
@@ -53,11 +52,11 @@ test.array.1.str
 
 #### Using selectors
 
-With Jeeves you can use CSS level 3-like selectors to query arrays inside your files.
-Using a selector will always return an array. 
+With Jeeves you are able to use CSS level 3-like selectors to query arrays inside your files.
+Using a selector will **always return an array**.
 You may use selectors to GET, PUT, PATCH and DELETE.
 
-**Careful**: The selector *must* be used on the last item of a query at the moment.
+**Careful**: The selector *must* be used on the last item of a query for the moment.
 
 ```
 test.array[str==teststring] // Returns all array entries which str-property equals 'teststring'.
@@ -181,7 +180,7 @@ DELETE http://localhost:3901/test.array[1]
 
 `HTTP 204`
 
-## WIP
+## TODO
 
 - Provide own files directory
 - Continuing queries after selectors
@@ -191,10 +190,9 @@ DELETE http://localhost:3901/test.array[1]
 - CLI with options(port, path)?
 - Query parameters to further specify your request: ordering, limiting, ...
 
-
 ## Authors
 
-**Christoph Bolz** - [GitHub](https://github.com/ChristophBolz)
+**Christoph Bolz** - [GitHub](https://github.com/chrisbolz)
 
 ## License
 

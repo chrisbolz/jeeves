@@ -8,9 +8,7 @@ module.exports = (req, res, next) => {
         if (!req.entries) {
             _.set(req.file, req.objectQuery, mergeDeep(_.get(req.file, req.objectQuery), req.body));
         } else {
-            if (!_.isArray(_.get(req.file, req.objectQuery))) {
-                res.status(400).send();
-            }
+            !_.isArray(_.get(req.file, req.objectQuery)) && res.status(400).send();
 
             let arrayToUpdate = _.get(req.file, req.objectQuery);
             _.each(req.entries, entry => {

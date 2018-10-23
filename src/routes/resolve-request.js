@@ -1,6 +1,5 @@
 const path = require('path');
 const _ = require('lodash');
-const sendError = require('./send-error');
 
 module.exports = (req, res, next) => {
     const fullQuery = req.params.query.split('.');

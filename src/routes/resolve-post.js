@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
         if (req.entries) {
             res.status(405).send();
         } else {
-            if(_.get(req.file, req.objectQuery) == null) {
+            if(typeof _.get(req.file, req.objectQuery) === 'undefined') {
                 _.set(req.file, req.objectQuery, req.body);
             } else {
                 if(_.isArray(_.get(req.file, req.objectQuery))) {

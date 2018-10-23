@@ -10,9 +10,7 @@ module.exports = (req, res, next) => {
         // Always use last query part as selector for now.
         const lastQueryPart = _.last(req.objectQuery);
 
-        if (!_.isArray(lastQueryPart.match(selectorMatcher))) {
-            res.status(400).send();
-        }
+        !_.isArray(lastQueryPart.match(selectorMatcher)) && res.status(400).send();
 
         req.objectQuery[req.objectQuery.length - 1] = lastQueryPart.substring(0, lastQueryPart.indexOf('['));
         req.entries = _.filter(_.get(req.file, req.objectQuery), entry => new Selector(lastQueryPart).compare(entry));

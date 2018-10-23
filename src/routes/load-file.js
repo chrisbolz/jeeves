@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 const sendError = require('./send-error');
 
 module.exports = (req, res, next) => {

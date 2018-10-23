@@ -158,7 +158,7 @@ describe("Test server.js POST", () => {
             .send(body)
             .end((err, res) => {
                 res.should.have.status(201);
-                res.should.be.json
+                res.should.be.json;
                 const changedFile = JSON.parse(fs.readFileSync(path.resolve(__dirname, './testData/test.json')).toString());
                 should.exist(changedFile.posted);
                 changedFile.posted.str.should.equal(body.str);
